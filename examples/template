@@ -1,0 +1,24 @@
+import React, { useRef } from "react";
+import { Text, StyleSheet, View, Animated, Pressable } from "react-native";
+
+export const Translation = () => {
+  return (
+    <Animated.View style={[styles.animatedContainer]}>
+      <Pressable style={styles.container} onPress={start}>
+        <Text>translation</Text>
+      </Pressable>
+    </Animated.View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: "100%",
+  },
+  animatedContainer: {
+    backgroundColor: "green",
+    width: 100,
+    height: 100,
+  },
+});

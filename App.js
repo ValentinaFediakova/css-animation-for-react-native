@@ -3,13 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import { Fade } from "./examples/Fade/Fade";
 import { Translation } from "./examples/Translation/Translation";
 import { Scale } from "./examples/Scale/Scale";
+import { WidthHeight } from "./examples/WidthHeight/WidthHeight";
 import { useState } from "react";
 
 export default function App() {
   const [translationLayoutPosition, setTranslationLayoutPosition] = useState(
     {}
   );
-  console.log("translationLayoutPosition", translationLayoutPosition.style);
   return (
     <View style={styles.container}>
       <View style={styles.box}>
@@ -20,6 +20,7 @@ export default function App() {
       </View>
 
       <Scale />
+      <WidthHeight />
     </View>
   );
 }
