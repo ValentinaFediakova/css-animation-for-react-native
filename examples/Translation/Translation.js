@@ -4,8 +4,11 @@ import { Text, StyleSheet, View, Animated, Pressable } from "react-native";
 export const Translation = ({ translationLayoutPosition }) => {
   const positionY =
     translationLayoutPosition.y + translationLayoutPosition.height;
+  const initialPosition = positionY + 40;
 
-  const translationAnimationValue = useRef(new Animated.Value(200)).current;
+  const translationAnimationValue = useRef(
+    new Animated.Value(initialPosition)
+  ).current;
 
   const translationAnimatedStyle = {
     transform: [
@@ -21,7 +24,7 @@ export const Translation = ({ translationLayoutPosition }) => {
       duration: 800,
     }).start(() => {
       Animated.timing(translationAnimationValue, {
-        toValue: 200,
+        toValue: initialPosition,
         duration: 800,
       }).start();
     });
