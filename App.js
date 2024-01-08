@@ -1,10 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import { useState } from "react";
 import { Fade } from "./examples/Fade/Fade";
 import { Translation } from "./examples/Translation/Translation";
 import { Scale } from "./examples/Scale/Scale";
 import { WidthHeight } from "./examples/WidthHeight/WidthHeight";
-import { useState } from "react";
+import { Color } from "./examples/Color/Color";
 
 export default function App() {
   const [translationLayoutPosition, setTranslationLayoutPosition] = useState(
@@ -18,9 +19,9 @@ export default function App() {
           <Translation translationLayoutPosition={translationLayoutPosition} />
         )}
       </View>
-
       <Scale />
       <WidthHeight />
+      <Color />
     </View>
   );
 }
