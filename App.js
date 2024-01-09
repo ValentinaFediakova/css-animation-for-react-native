@@ -46,15 +46,14 @@ const styles = StyleSheet.create({
     paddingTop: 40,
     position: "relative",
     marginBottom: 40,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    padding: 20,
   },
   box: {
     position: "relative",
     height: 280,
-  },
-  translationBox: {
-    position: "relative",
-    width: 100,
-    height: 100,
-    marginTop: 40,
+
+    marginRight: 40,
   },
 });
