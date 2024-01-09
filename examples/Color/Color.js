@@ -14,14 +14,8 @@ export const Color = () => {
   };
 
   const boxInterpolate = animateBackground.interpolate({
-    inputRange: [0.0, 0.2, 0.8, 0.9, 1.0],
-    outputRange: [
-      "rgb(245, 40, 145)",
-      "rgb(39, 245, 183)",
-      "rgba(54, 245, 39, 1)",
-      "rgba(187, 245, 39, 1)",
-      "rgba(245, 187, 39, 1)",
-    ],
+    inputRange: [0.0, 0.25, 0.5, 0.75, 1.0],
+    outputRange: ["rgb(245, 40, 145)", "blue", "orange", "green", "gray"],
   });
 
   const boxAnimatedStyles = {
@@ -31,7 +25,7 @@ export const Color = () => {
   return (
     <Animated.View style={[styles.animatedContainer, boxAnimatedStyles]}>
       <Pressable style={styles.container} onPress={startBoxAnimation}>
-        <Text>translation</Text>
+        <Text>bg color</Text>
       </Pressable>
     </Animated.View>
   );
