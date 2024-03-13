@@ -36,6 +36,10 @@ export const Fade = ({ onSetTranslationLayoutPosition }) => {
 };
 
 const styles = StyleSheet.create({
+  wrap: {
+    flexDirection: "column",
+    alignItems: "center",
+  },
   container: {
     marginTop: 40,
   },

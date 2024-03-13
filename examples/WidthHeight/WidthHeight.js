@@ -60,11 +60,13 @@ const styles = StyleSheet.create({
     backgroundColor: "green",
     marginTop: 40,
     width: 100,
-    marginRight: 40,
-    // height: 100,
+    // marginRight: 40,
+    alignItems: "center",
   },
   container: {
     flex: 1,
     width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

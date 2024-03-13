@@ -38,7 +38,7 @@ export const Scale = () => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 40,
-    marginRight: 40,
+    // marginRight: 40,
   },
   animatedContainer: {
     backgroundColor: "red",

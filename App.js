@@ -7,6 +7,7 @@ import { Scale } from "./examples/Scale/Scale";
 import { WidthHeight } from "./examples/WidthHeight/WidthHeight";
 import { Color } from "./examples/Color/Color";
 import { Rotate } from "./examples/Rotate/Rotate";
+import { WidthHeightPercentage } from "./examples/WidthHeightPercentage/WidthHeightPercentage";
 
 export default function App() {
   const [translationLayoutPosition, setTranslationLayoutPosition] = useState(
@@ -27,6 +28,7 @@ export default function App() {
             )}
           </View>
           <Scale />
+          <WidthHeightPercentage />
           <WidthHeight />
           <Color />
           <Rotate />
@@ -39,21 +41,22 @@ export default function App() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
+    width: "100%",
   },
   container: {
     backgroundColor: "#fff",
+    flexDirection: "column",
     alignItems: "center",
     paddingTop: 40,
     position: "relative",
     marginBottom: 40,
-    flexDirection: "row",
-    flexWrap: "wrap",
+
     padding: 20,
+    flex: 1,
   },
   box: {
     position: "relative",
     height: 280,
-
-    marginRight: 40,
+    // marginRight: 40,
   },
 });
