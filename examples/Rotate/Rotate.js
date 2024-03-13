@@ -14,26 +14,34 @@ export const Rotate = () => {
   };
 
   const startAnimation = () => {
+    console.log("start rotate animation");
     Animated.timing(animation, {
       toValue: 40,
       duration: 1000,
-    }).start();
+    }).start(() => {
+      Animated.timing(animation, {
+        toValue: 0,
+        duration: 1000,
+      }).start();
+    });
   };
 
   return (
-    <Animated.View style={[styles.animatedContainer, animationStale]}>
-      <Pressable onPress={startAnimation}>
+    <Pressable onPress={startAnimation}>
+      <Animated.View style={[styles.animatedContainer, animationStale]}>
         <Text>Rotate</Text>
-      </Pressable>
-    </Animated.View>
+      </Animated.View>
+    </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: "100%",
-  },
+  // container: {
+  //   flex: 1,
+  //   width: "100%",
+  //   width: 200,
+  //   height: 200,
+  // },
   animatedContainer: {
     backgroundColor: "green",
     width: 100,
