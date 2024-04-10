@@ -6,7 +6,6 @@ export const WidthHeight = () => {
   const animationWidth = useRef(new Animated.Value(100)).current;
 
   const animatedHeightStyle = {
-    // width: animation,
     height: animationHeight,
   };
 
@@ -17,11 +16,13 @@ export const WidthHeight = () => {
   const startWidthAnimation = () => {
     Animated.timing(animationWidth, {
       toValue: 200,
-      duration: 1000,
+      duration: 300,
+      useNativeDriver: true,
     }).start(() => {
       Animated.timing(animationWidth, {
         toValue: 100,
-        duration: 1000,
+        duration: 300,
+        useNativeDriver: true,
       }).start();
     });
   };
@@ -29,11 +30,13 @@ export const WidthHeight = () => {
   const startHeightAnimation = () => {
     Animated.timing(animationHeight, {
       toValue: 200,
-      duration: 1000,
+      duration: 300,
+      useNativeDriver: true,
     }).start(() => {
       Animated.timing(animationHeight, {
         toValue: 100,
-        duration: 1000,
+        duration: 300,
+        useNativeDriver: true,
       }).start(() => {
         startWidthAnimation();
       });

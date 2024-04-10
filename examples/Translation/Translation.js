@@ -22,10 +22,12 @@ export const Translation = ({ translationLayoutPosition }) => {
     Animated.timing(translationAnimationValue, {
       toValue: positionY,
       duration: 800,
+      useNativeDriver: true,
     }).start(() => {
       Animated.timing(translationAnimationValue, {
         toValue: initialPosition,
         duration: 800,
+        useNativeDriver: true,
       }).start();
     });
   };

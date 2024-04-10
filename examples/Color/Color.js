@@ -8,6 +8,7 @@ export const Color = () => {
     Animated.timing(animateBackground, {
       toValue: 1.0,
       duration: 3000,
+      useNativeDriver: true,
     }).start(() => {
       animateBackground.setValue(0);
     });

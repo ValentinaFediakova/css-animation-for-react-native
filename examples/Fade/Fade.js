@@ -12,10 +12,12 @@ export const Fade = ({ onSetTranslationLayoutPosition }) => {
     Animated.timing(fadeAnimationValue, {
       toValue: 0,
       duration: 800,
+      useNativeDriver: true,
     }).start(() => {
       Animated.timing(fadeAnimationValue, {
         toValue: 1,
         duration: 800,
+        useNativeDriver: true,
       }).start();
     });
   };

@@ -28,10 +28,10 @@ export default function App() {
             )}
           </View>
           <Scale />
-          <WidthHeightPercentage />
           <WidthHeight />
           <Color />
           <Rotate />
+          <WidthHeightPercentage />
         </View>
       </ScrollView>
     </SafeAreaView>

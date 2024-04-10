@@ -8,6 +8,7 @@ export const WidthHeightPercentage = () => {
     Animated.timing(animation, {
       toValue: 1,
       duration: 1000,
+      useNativeDriver: true,
     }).start(() => {
       animation.setValue(0);
     });
@@ -27,6 +28,17 @@ export const WidthHeightPercentage = () => {
     width: widthInterpolate,
     height: heightInterpolate,
   };
+
+  const animationEx = useRef(new Animated.Value(15)).current;
+  animationEx.setOffset(5);
+  // animationEx.extractOffset();
+  animationEx.flattenOffset();
+
+  console.log("animationEx", animationEx);
+
+  //value = 0;
+  //offset = 20;
+  //overall value = 20
 
   return (
     <Pressable onPress={startAnimation} style={styles.animatedContainer}>

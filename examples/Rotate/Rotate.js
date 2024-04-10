@@ -18,10 +18,12 @@ export const Rotate = () => {
     Animated.timing(animation, {
       toValue: 40,
       duration: 1000,
+      useNativeDriver: true,
     }).start(() => {
       Animated.timing(animation, {
         toValue: 0,
         duration: 1000,
+        useNativeDriver: true,
       }).start();
     });
   };

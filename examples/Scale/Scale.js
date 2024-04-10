@@ -16,10 +16,12 @@ export const Scale = () => {
     Animated.timing(animationScale, {
       toValue: -2.5,
       duration: 1000,
+      useNativeDriver: true,
     }).start(() => {
       Animated.timing(animationScale, {
         toValue: 1,
         duration: 1000,
+        useNativeDriver: true,
       }).start();
     });
   };
