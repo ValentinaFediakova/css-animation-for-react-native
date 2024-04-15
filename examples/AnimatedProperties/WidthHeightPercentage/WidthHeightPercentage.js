@@ -8,7 +8,7 @@ export const WidthHeightPercentage = () => {
     Animated.timing(animation, {
       toValue: 1,
       duration: 1000,
-      useNativeDriver: true,
+      // useNativeDriver: true,
     }).start(() => {
       animation.setValue(0);
     });
@@ -34,7 +34,7 @@ export const WidthHeightPercentage = () => {
   // animationEx.extractOffset();
   animationEx.flattenOffset();
 
-  console.log("animationEx", animationEx);
+  // console.log("animationEx", animationEx);
 
   //value = 0;
   //offset = 20;

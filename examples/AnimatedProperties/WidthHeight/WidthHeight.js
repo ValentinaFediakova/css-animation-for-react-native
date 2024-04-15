@@ -17,12 +17,12 @@ export const WidthHeight = () => {
     Animated.timing(animationWidth, {
       toValue: 200,
       duration: 300,
-      useNativeDriver: true,
+      // useNativeDriver: true,
     }).start(() => {
       Animated.timing(animationWidth, {
         toValue: 100,
         duration: 300,
-        useNativeDriver: true,
+        // useNativeDriver: true,
       }).start();
     });
   };
@@ -31,12 +31,12 @@ export const WidthHeight = () => {
     Animated.timing(animationHeight, {
       toValue: 200,
       duration: 300,
-      useNativeDriver: true,
+      // useNativeDriver: true,
     }).start(() => {
       Animated.timing(animationHeight, {
         toValue: 100,
         duration: 300,
-        useNativeDriver: true,
+        // useNativeDriver: true,
       }).start(() => {
         startWidthAnimation();
       });
